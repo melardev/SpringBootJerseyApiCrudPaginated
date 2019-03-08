@@ -43,7 +43,6 @@ public class TodosController {
                 .build();
     }
 
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{id}")

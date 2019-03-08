@@ -4,6 +4,7 @@ package com.melardev.spring.jaxrscrud.dtos.responses;
 import com.melardev.spring.jaxrscrud.entities.Todo;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class TodoSummaryDto {
     private final String title;
@@ -18,6 +19,8 @@ public class TodoSummaryDto {
         this.completed = completed;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+
+        // createdAt.format(DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy"));
     }
 
     public String getTitle() {

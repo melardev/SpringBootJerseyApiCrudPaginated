@@ -26,7 +26,7 @@ public class DbSeeder implements CommandLineRunner {
     @Override
     public void run(String... args) {
         System.out.printf("[+] We are using the following database connection string : %s\n" +
-                "Go ahead into http://localhost:8080/api/h2-console and paste that connection string,\nusername=user,password=password, to access" +
+                "Go ahead into http://localhost:8080/h2-console and paste that connection string,\nusername=user,password=password, to access" +
                 "the h2 database console ;)", ((HikariDataSource) dataSource).getJdbcUrl());
         long todosCount = this.todosRepository.count();
         Faker faker = new Faker(new Random(System.currentTimeMillis()));
